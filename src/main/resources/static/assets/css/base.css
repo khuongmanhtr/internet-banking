@@ -1,0 +1,310 @@
+:root {
+    --primary-color: #e8e8e8;
+    --width-layout: 1200px;
+    --text-color: #222;
+    --white-color: #fff;
+    --yellow-color: #e2bf54;
+    --modal-color: rgb(0, 0, 0, 0.4);
+    --done-button-color: #4bbf4b;
+    --cancel-button-color: #ef3838;
+    --staff-primary-color: #588ace;
+    --staff-hover-color: #c0cee0;
+    --box-shadow-degree: 0 0 11px 1.4px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+input::-webkit-input-placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    opacity: 0.7;
+}
+/* Table */ 
+.table-background-layer {
+    margin-top: 1.6rem;
+    min-height: 50vh;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow-degree);
+}
+
+.table-foreground-layer {
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+.table-foreground-layer thead {
+    background-color: var(--staff-primary-color);
+    height: 5rem;
+}
+
+.table-foreground-layer th {
+    text-transform: uppercase;
+    padding: 0 1.6rem;
+    border-bottom: 1px solid #ccc; 
+    transition: background-color 0.15s ease-in;
+    user-select: none;
+}
+
+.table-foreground-layer th:hover {
+    background-color: var(--staff-hover-color);
+    cursor: pointer;
+}
+
+.table-foreground-layer tbody tr {
+    border-bottom: 1px solid #e2e2e2;
+    transition: all 0.15s ease-in;
+    background-color: transparent;
+}
+
+.table-foreground-layer tbody tr:hover {
+    background-color: var(--primary-color);
+    border-left: 1rem solid var(--staff-hover-color);
+}
+
+.table-foreground-layer td {
+    padding: 0.8rem 1.6rem; 
+}
+
+.table-minimal-type {
+    font-size: 1.5rem;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 0.8rem;
+    box-shadow: var(--box-shadow-degree);
+}
+
+.table-minimal-type thead {
+    background-color: var(--staff-primary-color);
+}
+
+.table-minimal-type thead th {
+    padding: 0.8rem 1.6rem;
+    border-bottom: 1px solid #ccc; 
+    text-transform: uppercase;
+    transition: background-color 0.15s ease-in;
+    user-select: none;
+}
+
+.table-minimal-type thead th:hover {
+    background: var(--staff-hover-color);
+    cursor: pointer;
+}
+
+.table-minimal-type tbody {
+    background-color: var(--white-color);
+}
+
+.table-minimal-type tbody tr {
+    border-bottom: 1px solid #e2e2e2;
+    transition: all 0.15s ease-in;
+}
+
+.table-minimal-type tbody tr:hover {
+    background-color: var(--primary-color);
+    border-left: 1rem solid var(--staff-hover-color);
+}
+
+.table-minimal-type tbody td {
+    padding: 0.8rem 1.6rem;
+}
+
+/* Button */
+.btn {
+    background-color: transparent;
+    border: none;
+}
+
+.square-btn {
+    display: inline-block;
+    color: var(--text-color);
+    border-radius: 5px;
+    box-shadow: 0 0 11px 1.4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.pill-btn {
+    display: inline-block;
+    color: var(--text-color);
+    border-radius: 25px;
+    box-shadow: 0 0 11px 1.4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+.red-type-btn {
+    background-color: var(--cancel-button-color);
+    transition: all 0.15s ease-in;
+}
+
+.red-type-btn:hover {
+    background-color: #b52e2e;
+}
+
+.blue-type-btn {
+    background-color: var(--staff-primary-color);
+    transition: all 0.15s ease-in;
+}
+
+.blue-type-btn:hover {
+    background-color: #3f5c86;
+}
+
+.green-type-btn {
+    background-color: var(--done-button-color);
+    transition: all 0.15s ease-in;
+}
+
+.green-type-btn:hover {
+    background-color: #378237;
+}
+
+.yellow-type-btn {
+    background-color: var(--yellow-color);
+    transition: all 0.15s ease-in;
+}
+
+.yellow-type-btn:hover {
+    background-color: #8b7634;
+}
+
+.black-type-btn {
+    color: var(--white-color);
+    background-color: #3f3f3f;
+    transition: all 0.15s ease-in;
+}
+
+.black-type-btn:hover {
+    background-color: #000;
+    color: var(--white-color);
+}
+
+.text-al-center {
+    text-align: center;
+}
+
+/* Input date css */
+::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+}
+/* Input number css*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* 12 column grid system */
+
+.grid {
+    width: var(--width-layout);
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.grid-col {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.grid-col-1 {
+    width: calc(1 / 12 * 100%)
+}
+
+.grid-col-1-2 {
+    width: calc(1.2 / 12 * 100%)
+}
+
+.grid-col-2 {
+    width: calc(2 / 12 * 100%)
+}
+
+.grid-col-3 {
+    width: calc(3 / 12 * 100%)
+}
+
+.grid-col-4 {
+    width: calc(4 / 12 * 100%)
+}
+
+.grid-col-5 {
+    width: calc(5 / 12 * 100%)
+}
+
+.grid-col-6 {
+    width: calc(6 / 12 * 100%)
+}
+
+.grid-col-7 {
+    width: calc(7 / 12 * 100%)
+}
+
+.grid-col-8 {
+    width: calc(8 / 12 * 100%)
+}
+
+.grid-col-9 {
+    width: calc(9 / 12 * 100%)
+}
+
+.grid-col-10 {
+    width: calc(10 / 12 * 100%)
+}
+
+.grid-col-11 {
+    width: calc(11 / 12 * 100%)
+}
+
+.grid-col-12 {
+    width: calc(12 / 12 * 100%)
+}
+
+/* Animaition */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
