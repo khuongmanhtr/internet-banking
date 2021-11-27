@@ -96,24 +96,24 @@
                             </thead>
                             <tbody>
 
-                            <c:forEach items="${account.transactionHistoryList}" var="tran">
+                            <c:forEach items="${transactionHistoryList}" var="thl">
                                 <c:choose>
-                                    <c:when test="${tran.amount >= 0}">
+                                    <c:when test="${thl.amount >= 0}">
                                         <tr class="banking__account-history--increase">
-                                            <td>${tran.description}</td>
+                                            <td>${thl.description}</td>
                                             <td>
-                                                +<fmt:formatNumber type="number" value="${tran.amount}" pattern="###,###"/>
+                                                +<fmt:formatNumber type="number" value="${thl.amount}" pattern="###,###"/>
                                             </td>
-                                            <td>${tran.transactionDate}</td>
+                                            <td>${thl.transactionDate}</td>
                                         </tr>
                                     </c:when>
                                     <c:otherwise>
                                         <tr class="banking__account-history--decrease">
-                                            <td>${tran.description}</td>
+                                            <td>${thl.description}</td>
                                             <td>
-                                                <fmt:formatNumber type="number" value="${tran.amount}" pattern="###,###"/>
+                                                <fmt:formatNumber type="number" value="${thl.amount}" pattern="###,###"/>
                                             </td>
-                                            <td>${tran.transactionDate}</td>
+                                            <td>${thl.transactionDate}</td>
                                         </tr>
                                     </c:otherwise>
                                 </c:choose>

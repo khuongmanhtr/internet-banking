@@ -1,8 +1,15 @@
 package demo.InternetBanking.entity;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.util.List;
 
+@Getter
+@Setter
+@NoArgsConstructor
 @Entity
 @Table (name = "bank_account")
 public class BankAccount {
@@ -21,47 +28,4 @@ public class BankAccount {
 
     @OneToMany(mappedBy = "account")
     private List<TransactionHistory> transactionList;
-
-    public BankAccount() {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getAccountNumber() {
-        return accountNumber;
-    }
-
-    public void setAccountNumber(String accountNumber) {
-        this.accountNumber = accountNumber;
-    }
-
-    public String getAccountOwner() {
-        return accountOwner;
-    }
-
-    public void setAccountOwner(String accountOwner) {
-        this.accountOwner = accountOwner;
-    }
-
-    public double getBalance() {
-        return balance;
-    }
-
-    public void setBalance(double balance) {
-        this.balance = balance;
-    }
-
-    public List<TransactionHistory> getTransactionHistoryList() {
-        return transactionList;
-    }
-
-    public void setTransactionHistoryList(List<TransactionHistory> transactionList) {
-        this.transactionList = transactionList;
-    }
 }
